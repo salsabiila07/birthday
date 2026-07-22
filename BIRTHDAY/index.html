@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sweet Birthday Celebration 💖</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,600;1,400&family=Sacramento&display=swap" rel="stylesheet">
+    <!-- Three.js Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Three.js Canvas Background (Floating Balloons & Petals) -->
+    <canvas id="bgCanvas"></canvas>
+
+    <!-- Background Music -->
+    <audio id="bgMusic" loop>
+        <source src="hbd.mpeg" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <!-- Music Control Floating Button -->
+    <div class="music-player" onclick="toggleMusic()">
+        <div class="music-icon" id="musicIcon">🎵</div>
+        <span id="musicText" style="font-size: 0.85rem; font-weight: 600; color: #b5455c;">Play Music</span>
+    </div>
+
+    <!-- 1. HERO SECTION -->
+    <section id="hero">
+        <div class="container glass-card">
+            <h2 class="hero-subtitle">To Eha Ekawati</h2>
+            <h1 class="hero-title">Happy Birthday</h1>
+            <h2 style="font-family: 'Playfair Display', serif; color: #b5455c; font-size: 2.3rem; margin-top: 5px;" id="targetName">Teteh ku sayang ✨</h2>
+            <p style="max-width: 620px; margin: 20px auto;">Maaf ya telat, aku mau ngasih sedikit ucapan untukmu semoga kamu suka ya</p>
+            <a href="#cakeSection" class="btn">Klik tombol ini 🎂</a>
+        </div>
+    </section>
+
+    <!-- 2. 3D CAKE SECTION -->
+    <section id="cakeSection">
+        <div class="container glass-card">
+            <h2 class="section-title">The Birthday Cake</h2>
+            <p>Ucapkan harapan tulus dan tiup lilin untuk membuka kejutan ajaibmu!!</p>
+            
+            <!-- 3D Cake Render Container -->
+            <div id="cakeContainer"></div>
+
+            <button class="btn" id="blowCandleBtn" onclick="blowCandles()">Tiup Lilin 🕯️✨</button>
+        </div>
+    </section>
+
+    <!-- 3. PHOTO GALLERY SECTION (10+ Photos) -->
+    <section id="gallery">
+        <div class="container glass-card">
+            <h2 class="section-title">Sweet Memories 🌷</h2>
+            <p>Ini sedikit moment saat kita bersama dan semoga tetap bersama salsa terus ya teh, JANGAN LUPAIN AKU.</p>
+            
+            <div class="gallery-wrapper">
+                <div class="photo-card"><img src="foto1.jpeg" alt="Memory 1"></div>
+                <div class="photo-card"><img src="foto2.jpeg" alt="Memory 2"></div>
+                <div class="photo-card"><img src="foto3.jpeg" alt="Memory 3"></div>
+                <div class="photo-card"><img src="foto4.jpeg" alt="Memory 4"></div>
+                <div class="photo-card"><img src="foto5.jpeg" alt="Memory 5"></div>
+                <div class="photo-card"><img src="foto6.jpeg" alt="Memory 6"></div>
+                <div class="photo-card"><img src="foto7.jpeg" alt="Memory 7"></div>
+                <div class="photo-card"><img src="foto8.jpeg" alt="Memory 8"></div>
+                <div class="photo-card"><img src="foto9.jpeg" alt="Memory 9"></div>
+                <div class="photo-card"><img src="foto10.jpeg" alt="Memory 10"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. MESSAGE & SURPRISE SECTION -->
+    <section id="message">
+        <div class="container glass-card envelope-box">
+            <h2 class="section-title">Digital Greeting Card 💌</h2>
+            <div id="envelopeView">
+                <p>Klik amplop dibawah ini untuk membuka pesan ulang tahun</p>
+                <div style="font-size: 85px; cursor: pointer; margin: 25px 0; transition: transform 0.3s;" onclick="openEnvelope()">
+                    ✉️
+                </div>
+                <button class="btn" onclick="openEnvelope()">Open Letter</button>
+            </div>
+
+            <div class="message-content" id="messageContent">
+                <h3 style="font-family: 'Playfair Display', serif; color: #d84768; font-size: 2rem; margin-bottom: 20px;">Dearest You, 🌸</h3>
+                <p style="text-align: justify; margin-bottom: 25px; font-size: 1.1rem;">
+                    "Barakallahu fii umrik teh eha, sehat selalu ya panjang umur rezeki nya lancar happy terus rajin beribadahnya, semoga menjadi wanita yang kuat selalu, menjadi pribadi yang lebih baik lagi, semoga semua impian dan cita-cita di masa depan bisa tercapai, semoga semakin besar semakin kuat jalanin cobaan yang diberikan oleh Allah, semoga hal baik menyertaimu, terimakasih udah menjai tempat keluh kesahku, hidup lebih lama ya dan tetap jadi tetehku yang baik hati, aku akan selalu bangga atas setiap proses yang sudah kamu lalui, i will always support u "
+                </p>
+                <button class="btn" onclick="triggerSurprise()">Open Ultimate Surprise 🎆</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Link JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
